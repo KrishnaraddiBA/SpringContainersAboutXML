@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	
+	<bean class="com.durgesh.SpringIocContainer.collection.Employee" name="employee1">
+	<property name="id">
+	<value>101</value>
+	</property>
+	<property name="name"><value>krishna</value></property>
+	
+	<property name="phnNo">
+	<list><value>7676371845</value>
+	<value>9916152343</value>
+	<value>8147377824</value>
+	</list>
+	</property>
+<property name="adress">
+<set><value>gadag</value>
+<value>hyderabad</value>
+<value>bangalore</value>
+<value>warrangel</value>
+</set>
+</property>	
+<property name="courses">
+<map><entry key="java" value="2 months"/>
+<entry key="python" value="3 months"/>
+<entry key="gichi" value="1 min"/>
+</map>
+</property>
+
+	</bean>
+</beans>

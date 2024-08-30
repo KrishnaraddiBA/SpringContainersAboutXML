@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util.xsd">
+	
+	
+	<!--  standaloneList-->
+	<util:list list-class="java.util.LinkedList" id="listprop">
+	<value>krishnaraddi</value>
+	<value>mallu</value>
+	<value>shashank</value>
+	<value>uday</value>
+	</util:list>
+	
+	
+	<!--  standaloneMaps-->
+	<util:map map-class="java.util.HashMap" id="mapprops">
+	<entry key="java" value="22000"/>
+	<entry key="python" value="12000"/>
+	<entry key="hibernate" value="2000"/>
+	<entry key="spring" value="7000"/>
+	
+	</util:map>
+	
+	
+	<!--  standaloneproperties-->
+	<util:properties id="dbconfig">
+	<prop key="driver">com.mysql.jdbc.Driver</prop>
+	<prop key="username">root</prop>
+	<prop key="password">test</prop>
+	<prop key="url">jdbc:mysql://localhost:3306/testdb</prop>
+	</util:properties>
+	
+	
+	<!--  standaloneapps-->
+	<bean class="com.durgesh.SpringIocContainer.springstandaloneapplication.Student" name="stu1">
+	<property name="friends" ref="listprop"/>
+	<property name="map" ref="mapprops"/>
+	<property name="props" ref="dbconfig"/>
+	</bean>
+	
+	
+
+</beans>
